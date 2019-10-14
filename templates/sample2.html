@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Topic Table</title>
+</head>
+<body>
+    <h1>Topic Table</h1>    
+    {% if objects %}
+    <table border="2pt">
+        <thead>
+            <th>Topic_Name</th>
+        </thead>
+        {% for obj in objects %}
+        <tr><td>{{obj.topic_name}}</td></tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <h1>NO Data</h1>
+    {% endif %}
+    <table></table>
+</body>
+</html>
